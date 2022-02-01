@@ -1,0 +1,55 @@
+/* I (as a user) don't like to be used as a rendering engine. */
+
+:root {
+    --box-shadow: 0 1px 2px hsl(0deg 0% 0% / 10%);
+    --ww-trends-bg-color: rgb(247, 249, 249);
+    --ww-trends-bg-color: hsl(180deg 14% 98%);
+    --ww-trends-radius: 16px;
+}
+
+body {
+    background-color: hsl(0, 0%, 96%) !important;
+}
+
+/* Timeline */
+main > div > div > div > div:first-child {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+main > div > div > div > div:first-child > div > div:nth-child(1),  /* Home */
+main > div > div > div > div:first-child > div > div:nth-child(2) { /* What's happening? */
+    box-shadow: var(--box-shadow);
+}
+main > div > div > div > div:first-child > div > div:nth-child(2) { /* What's happening? */
+    z-index: 9;
+}
+
+/* A Tweet */
+div[aria-label='Timeline: Your Home Timeline'] > div:first-child > div > div {
+    background-color: white;
+    margin-top: 1em;
+    box-shadow: var(--box-shadow);
+    border-bottom: none;
+    border-radius: calc(var(--ww-trends-radius) * 0.25);
+}
+
+/* Search Twitter */
+div[data-testid=sidebarColumn] > div > div:last-child > div > div > div > div:first-child {
+    background-color: hsl(0, 0%, 96%) !important;
+}
+div[data-testid=sidebarColumn] > div > div:last-child > div > div > div > div:first-child form > div:first-child > div {
+    background-color: white;
+    background-color: var(--ww-trends-bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Worldwide trends */
+main > div > div > div > div:last-child > div > div:last-child > div > div > div > div:nth-child(3) {
+    box-shadow: var(--box-shadow);
+}
+
+/* Who to follow */
+main > div > div > div > div:last-child > div > div:last-child > div > div > div > div:nth-child(4) {
+    box-shadow: var(--box-shadow);
+}
